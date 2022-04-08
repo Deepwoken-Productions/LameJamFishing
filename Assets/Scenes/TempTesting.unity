@@ -240,7 +240,7 @@ MonoBehaviour:
   - {fileID: 7364566766439780772, guid: ec8ae859624620e40ba4376d71992f78, type: 3}
   shinyParticle: {fileID: 5608242513187657202, guid: ae4bafd28e1a6d2489ac4ae53b6d0d21, type: 3}
   spawnChance: 0.0005
-  shinyChance: 0.01
+  shinyChance: 1
 --- !u!224 &973223218
 RectTransform:
   m_ObjectHideFlags: 0

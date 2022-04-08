@@ -52,7 +52,7 @@ public class WorldController : MonoBehaviour
         //is shiny
         if (Random.Range(0, 1f) <= shinyChance)
         {
-            Instantiate(shinyParticle, Vector3.zero, Quaternion.Euler(0,0,180), go);
+            Instantiate(shinyParticle, go);
         }
     }
 }
