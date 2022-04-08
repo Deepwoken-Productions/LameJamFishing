@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -19,16 +20,39 @@ public class Fish : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        DrawDebug();
+        
         _rigidBody = GetComponent<Rigidbody2D>();
 
         //Launch the fish
-        Vector2 direction = Vector2.up * verticalForce;
-        float rot = Random.Range(jumpAngleMin, jumpAngleMax) * Mathf.Deg2Rad;
+        Vector2 direction;
+        float rot = Random.Range(jumpAngleMin, jumpAngleMax) *  Mathf.Deg2Rad;
         direction.x = Mathf.Cos(rot) - Mathf.Sin(rot);
         direction.y = Mathf.Sin(rot) + Mathf.Cos(rot);
-        _rigidBody.AddForce(direction, ForceMode2D.Impulse);
+        
+        Debug.DrawRay(transform.position, direction * verticalForce, Color.red, 5f);
+        _rigidBody.AddForce(direction * verticalForce, ForceMode2D.Impulse);
+        transform.eulerAngles = new Vector3(0, 0, rot * Mathf.Rad2Deg);
     }
-    
+
+    void DrawDebug()
+    {
+        Vector2 direction;
+        float jumpMin = jumpAngleMin * Mathf.Deg2Rad;
+        float jumpMax = jumpAngleMax * Mathf.Deg2Rad;
+        direction.x = Mathf.Cos(jumpMin) - Mathf.Sin(jumpMin);
+        direction.y = Mathf.Sin(jumpMin) + Mathf.Cos(jumpMin);
+        Debug.DrawRay(transform.position, direction * verticalForce, Color.green, 5f);
+        direction.x = Mathf.Cos(jumpMax) - Mathf.Sin(jumpMax);
+        direction.y = Mathf.Sin(jumpMax) + Mathf.Cos(jumpMax);
+        Debug.DrawRay(transform.position, direction * verticalForce, Color.green, 5f);
+    }
+
+    private void Update()
+    {
+        //
+    }
+
     //Begin grapple
     private void OnTriggerEnter2D(Collider2D other)
     {

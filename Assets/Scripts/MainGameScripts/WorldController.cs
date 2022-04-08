@@ -11,7 +11,6 @@ public class WorldController : MonoBehaviour
     public static int playerPoints = 0;
     public static float curTime { get; private set; }
     
-    [SerializeField] private Transform fishParent;
     [SerializeField] private GameObject [] spawnableFish;
     [SerializeField] private GameObject shinyParticle;
     [Range(0,1f)]
@@ -24,6 +23,7 @@ public class WorldController : MonoBehaviour
     private void Start()
     {
         spawnArea = GetComponent<RectTransform>();
+        BeginRound(60000);
     }
 
     public async void BeginRound(float duration)
@@ -47,11 +47,12 @@ public class WorldController : MonoBehaviour
 
         Vector2 spawnLoc = new Vector2(Random.Range(spawnArea.rect.min.x, spawnArea.rect.max.x), Random.Range(spawnArea.rect.min.y, spawnArea.rect.max.y));
 
-        Transform go = Instantiate(spawnableFish[randomFish], spawnLoc, Quaternion.identity, fishParent).transform;
+        spawnLoc += (Vector2)transform.position;
+        Transform go = Instantiate(spawnableFish[randomFish], spawnLoc, Quaternion.identity, transform).transform;
         //is shiny
         if (Random.Range(0, 1f) <= shinyChance)
         {
-            Instantiate(shinyParticle, go);
+            Instantiate(shinyParticle, Vector3.zero, Quaternion.Euler(0,0,180), go);
         }
     }
 }
