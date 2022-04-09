@@ -16,6 +16,7 @@ public class Fish : MonoBehaviour
     
     private Rigidbody2D _rigidBody;
     private Collider2D _collider;
+    private GrappleCollision _hookProperties;
 
     // Start is called before the first frame update
     void Awake()
@@ -50,7 +51,10 @@ public class Fish : MonoBehaviour
 
     private void Update()
     {
-        //
+        if(_hookProperties != null)
+        {
+            transform.position = _hookProperties.grapple.GetEndPosition();
+        }
     }
 
     //Begin grapple
@@ -60,12 +64,27 @@ public class Fish : MonoBehaviour
         if (other.gameObject.layer == catchLayer)
         {
             WorldController.playerPoints += ptsValue; 
-            Destroy(gameObject);
+   //         Destroy(gameObject);
         }
         //Fish should despawn
         else
         {
-            Destroy(gameObject);
+      //      Destroy(gameObject);
         }
+    }
+
+    public void OnHooked(GrappleCollision collision)
+    {
+        if (collision == null || (_hookProperties = collision))
+            return;
+
+        _hookProperties = collision;
+        _rigidBody.isKinematic = true;
+    }
+
+    public void DestroyFish()
+    {
+        WorldController.playerPoints += ptsValue;
+        Destroy(gameObject);
     }
 }
