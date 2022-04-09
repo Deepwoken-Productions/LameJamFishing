@@ -151,4 +151,4 @@ MonoBehaviour:
   catchLayer:
     serializedVersion: 2
     m_Bits: 8
-  splashMass: 8
+  splashMass: 15
