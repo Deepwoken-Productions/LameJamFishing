@@ -13,6 +13,7 @@ public class WorldController : MonoBehaviour
     
     [SerializeField] private GameObject [] spawnableFish;
     [SerializeField] private GameObject shinyParticle;
+    [SerializeField] private float[] fishSpawnZs;
     [Range(0,1f)]
     [SerializeField] private float spawnChance;
     [Range(0,1f)]
@@ -47,9 +48,9 @@ public class WorldController : MonoBehaviour
     {
         int randomFish = Random.Range(0, spawnableFish.Length);
 
-        Vector2 spawnLoc = new Vector2(Random.Range(spawnArea.rect.min.x, spawnArea.rect.max.x), Random.Range(spawnArea.rect.min.y, spawnArea.rect.max.y));
+        Vector3 spawnLoc = new Vector3(Random.Range(spawnArea.rect.min.x, spawnArea.rect.max.x), Random.Range(spawnArea.rect.min.y, spawnArea.rect.max.y), fishSpawnZs[Random.Range(0,fishSpawnZs.Length)]);
 
-        spawnLoc += (Vector2)transform.position;
+        spawnLoc += transform.position;
         Transform go = Instantiate(spawnableFish[randomFish], spawnLoc, Quaternion.identity, transform).transform;
         //is shiny
         if (Random.Range(0, 1f) <= shinyChance)

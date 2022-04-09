@@ -145,9 +145,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ptsValue: 5
-  jumpAngleMin: 50
+  jumpAngleMin: 60
   jumpAngleMax: 80
-  verticalForce: 10
+  verticalForce: 20
   catchLayer:
     serializedVersion: 2
     m_Bits: 8
+  splashMass: 8

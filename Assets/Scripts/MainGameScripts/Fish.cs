@@ -13,6 +13,7 @@ public class Fish : MonoBehaviour
     [SerializeField] private float jumpAngleMax;
     [SerializeField] private float verticalForce;
     [SerializeField] private LayerMask catchLayer;
+    public float splashMass;
     
     private Rigidbody2D _rigidBody;
     private Collider2D _collider;
