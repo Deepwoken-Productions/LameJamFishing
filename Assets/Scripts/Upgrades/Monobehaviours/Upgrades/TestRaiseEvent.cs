@@ -6,6 +6,9 @@ public class TestRaiseEvent : MonoBehaviour
 {
     public EventObject eventToRaise;
     public GameObject upgrade;
+    public GameObject incompatibleUpgrade;
+
+    public GiveUpgrade upgradeGiver;
 
     void Update()
     {
@@ -16,7 +19,12 @@ public class TestRaiseEvent : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.A))
         {
-            Instantiate(upgrade);
+            upgradeGiver.SpawnUpgrade(upgrade);
+        }
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            upgradeGiver.SpawnUpgrade(incompatibleUpgrade);
         }
     }
 }
