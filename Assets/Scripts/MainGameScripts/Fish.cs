@@ -70,7 +70,7 @@ public class Fish : MonoBehaviour
         //Fish should despawn
         else
         {
-      //      Destroy(gameObject);
+     //       Destroy(gameObject);
         }
     }
 

@@ -21,18 +21,6 @@ public class Event : MonoBehaviour
         playingEvent = true;
     }
 
-    private void Update()
-    {
-        if (!playingEvent)
-            return;
-
-        t += Time.deltaTime;
-
-        if(t >= duration)
-        {
-            EndEvent();
-        }
-    }
 
     public virtual void EndEvent()
     {

@@ -20,7 +20,9 @@ public class EventManager : MonoBehaviour
         else
         {
             if (currentEvent != null && currentEvent.playingEvent)
+            {
                 currentEvent.EndEvent();
+            }
 
             currentEventTimer = 0.0f;
             currentEvent = events[Random.Range(0, events.Length)];
@@ -28,7 +30,6 @@ public class EventManager : MonoBehaviour
             if (currentEvent != null)
             {
                 currentEvent.PreformEvent();
-                Debug.Log(currentEvent.type);
             }
         }
     }

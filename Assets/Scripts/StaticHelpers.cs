@@ -29,7 +29,6 @@ public static class StaticHelpers
         float endAlpha = fadeIn ? 1 : 0;
         while (curTime < duration)
         {
-            Debug.Log("Fading");
             img.color = new Color(imgColor.r, imgColor.g, imgColor.b, Mathf.Lerp(originAlpha, endAlpha, curTime / duration));
             curTime += Time.deltaTime;
             await Task.Yield();

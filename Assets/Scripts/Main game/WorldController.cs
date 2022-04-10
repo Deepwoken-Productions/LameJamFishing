@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(RectTransform))]
@@ -13,6 +14,7 @@ public class WorldController : MonoBehaviour
     
     [SerializeField] private GameObject [] spawnableFish;
     [SerializeField] private GameObject shinyParticle;
+    [SerializeField] private Text fishCollectedText; 
     [SerializeField] private float[] fishSpawnZs;
     [Range(0,1f)]
     [SerializeField] private float spawnChance;
@@ -42,6 +44,11 @@ public class WorldController : MonoBehaviour
             curTime += Time.deltaTime;
             await Task.Yield();
         }
+    }
+
+    private void Update()
+    {
+        fishCollectedText.text = "FISH COLLECTED: " + playerPoints;
     }
 
     private void SpawnFish()

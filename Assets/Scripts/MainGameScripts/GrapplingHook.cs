@@ -23,6 +23,7 @@ public class GrapplingHook : MonoBehaviour
     [SerializeField] private Transform retractTransform;
     [SerializeField] private AnimationCurve ropeAnimationCurve;
     [SerializeField] private AnimationCurve ropeLaunchSpeedCurve;
+    [SerializeField] private Animator armAnimator;
 
 
     public float test;
@@ -33,45 +34,44 @@ public class GrapplingHook : MonoBehaviour
     private float currentWaveSize = 0.0f;
     private GrappleCollision grappleCollision;
     private CameraController camController;
+    private AudioSource audioSource;
 
     private void Awake()
     {
-        lineRenderer = GetComponent<LineRenderer>();
-        lineRenderer.positionCount = percision;
-        state = GrappleStates.Idle;
-        currentWaveSize = waveSize;
-
         grappleCollision = new GameObject("GrappleCollision").AddComponent<GrappleCollision>();
         grappleCollision.Initialize(this);
         grappleCollision.gameObject.AddComponent<BoxCollider2D>();
         camController = FindObjectOfType<CameraController>();
+        lineRenderer = GetComponent<LineRenderer>();
+        audioSource = GetComponent<AudioSource>();
+
+        lineRenderer.positionCount = percision;
+        state = GrappleStates.Idle;
+        currentWaveSize = waveSize;
     }
 
     private void Update()
     {
+        if (state != GrappleStates.Idle)
+            moveTime += Time.deltaTime;
+
         bool shootGrapple = Input.GetMouseButtonDown(0) && state == GrappleStates.Idle;
 
         if (shootGrapple)
         {
-            state = GrappleStates.Shooting;
-            grappleTarget = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            moveTime = 0.0f;
-            lineRenderer.enabled = true;
+            Fire();
         }
-
-        if (state != GrappleStates.Idle)
-            moveTime += Time.deltaTime;
 
         if (state == GrappleStates.Shooting)
         {
             if (lineRenderer.GetPosition(percision - 1).x != grappleTarget.x)
-                CalculateShootPositions();
+                UpdateShoot();
             else
             {
                 if (currentWaveSize > 0)
                 {
                     currentWaveSize -= Time.deltaTime * straightenLineSpeed;
-                    CalculateShootPositions();
+                    UpdateShoot();
                 }
                 else
                 {
@@ -88,11 +88,21 @@ public class GrapplingHook : MonoBehaviour
         }
         else if (state == GrappleStates.Retracting)
         {
-            CalculateRetractPositions();
+            UpdateRetract();
         }
     }
 
-    private void CalculateShootPositions()
+    private void Fire()
+    {
+        state = GrappleStates.Shooting;
+        grappleTarget = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        moveTime = 0.0f;
+        lineRenderer.enabled = true;
+        armAnimator.SetTrigger("Throw");
+        audioSource.Play();
+    }
+
+    private void UpdateShoot()
     {
         for (int i = 0; i < percision; i++)
         {
@@ -108,7 +118,7 @@ public class GrapplingHook : MonoBehaviour
         camController.SetTarget(grappleCollision.transform);
     }
 
-    private void CalculateRetractPositions()
+    private void UpdateRetract()
     {
         Vector3 target = shootTransform.position;
 
