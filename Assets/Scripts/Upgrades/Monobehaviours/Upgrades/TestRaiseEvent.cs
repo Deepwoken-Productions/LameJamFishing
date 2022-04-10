@@ -5,9 +5,18 @@ using UnityEngine;
 public class TestRaiseEvent : MonoBehaviour
 {
     public EventObject eventToRaise;
+    public GameObject upgrade;
 
-    void Start()
+    void Update()
     {
-        eventToRaise.Invoke();
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            eventToRaise.Invoke();
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            Instantiate(upgrade);
+        }
     }
 }

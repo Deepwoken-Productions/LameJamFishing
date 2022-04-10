@@ -123,109 +123,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &198082075
+--- !u!1 &26561052 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1649642292948053422, guid: 49d0918d1828fec4db7c5cf9d30633d4, type: 3}
+  m_PrefabInstance: {fileID: 262392322}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 198082076}
-  - component: {fileID: 198082078}
-  - component: {fileID: 198082077}
-  - component: {fileID: 198082079}
-  m_Layer: 0
-  m_Name: Testing
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &198082076
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 198082075}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3466199, y: 0.11423289, z: -5.2075377}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &198082077
+--- !u!114 &26561053
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 198082075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7b822052d4fa5d458cb947a353966b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &198082078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 198082075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c74af7ab915642c4cb5d662a87506bd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventDelegatePairs:
-  - serializedDelegate:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 198082077}
-          m_TargetAssemblyTypeName: TestUpgrade, Assembly-CSharp
-          m_MethodName: Execute
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    serializedEvent: {fileID: 11400000, guid: ffd7ec56f7bbec54aacfa0acdc9de0cc, type: 2}
-  - serializedDelegate:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 198082075}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    serializedEvent: {fileID: 11400000, guid: 3b43a16d374c1dd4f80befcceb19822d, type: 2}
---- !u!114 &198082079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 198082075}
+  m_GameObject: {fileID: 26561052}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec713d4c052223d43b50b107fb37c96b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   eventToRaise: {fileID: 11400000, guid: ffd7ec56f7bbec54aacfa0acdc9de0cc, type: 2}
+  upgrade: {fileID: 3187501935214974839, guid: 48380d11b2bc1b043bc07c2e9fb0a30c, type: 3}
 --- !u!1001 &262392322
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -238,12 +154,24 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1649642292948053419, guid: 49d0918d1828fec4db7c5cf9d30633d4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 1649642292948053419, guid: 49d0918d1828fec4db7c5cf9d30633d4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 1649642292948053419, guid: 49d0918d1828fec4db7c5cf9d30633d4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 1649642292948053419, guid: 49d0918d1828fec4db7c5cf9d30633d4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.036
+      value: -0.09
       objectReference: {fileID: 0}
     - target: {fileID: 1649642292948053419, guid: 49d0918d1828fec4db7c5cf9d30633d4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.33209994
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 1649642292948053419, guid: 49d0918d1828fec4db7c5cf9d30633d4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -534,4 +462,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smoothing: 1
+  additionalForce: 0
   offset: {x: 0, y: 0, z: -10}
