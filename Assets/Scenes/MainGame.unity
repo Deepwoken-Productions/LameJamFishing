@@ -5242,7 +5242,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 605120819}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.6832555e-11, y: 35, z: 0}
+  m_LocalPosition: {x: 1.863094e-20, y: -7.4600444, z: 0}
   m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_Children:
   - {fileID: 1400801035}
@@ -5937,7 +5937,11 @@ PrefabInstance:
       objectReference: {fileID: 7364566766439780772, guid: b0a8c0fcbd986ee4b9dbbcb36423ef5e, type: 3}
     - target: {fileID: 2828296964670293144, guid: 8640a43b3d34f7c4cb4ac6cd6fef90cc, type: 3}
       propertyPath: gameEndEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2828296964670293144, guid: 8640a43b3d34f7c4cb4ac6cd6fef90cc, type: 3}
+      propertyPath: gameEndEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2828296964670293144, guid: 8640a43b3d34f7c4cb4ac6cd6fef90cc, type: 3}
       propertyPath: gameEndEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
@@ -5950,11 +5954,11 @@ PrefabInstance:
     - target: {fileID: 2828296964670293144, guid: 8640a43b3d34f7c4cb4ac6cd6fef90cc, type: 3}
       propertyPath: gameEndEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 505426906}
+      objectReference: {fileID: 903881609}
     - target: {fileID: 2828296964670293144, guid: 8640a43b3d34f7c4cb4ac6cd6fef90cc, type: 3}
       propertyPath: gameEndEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 903881609}
+      objectReference: {fileID: 1391641886}
     - target: {fileID: 2828296964670293144, guid: 8640a43b3d34f7c4cb4ac6cd6fef90cc, type: 3}
       propertyPath: gameEndEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
@@ -5972,6 +5976,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2828296964670293144, guid: 8640a43b3d34f7c4cb4ac6cd6fef90cc, type: 3}
+      propertyPath: gameEndEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetPanning
+      objectReference: {fileID: 0}
+    - target: {fileID: 2828296964670293144, guid: 8640a43b3d34f7c4cb4ac6cd6fef90cc, type: 3}
       propertyPath: gameEndEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: Pause
       objectReference: {fileID: 0}
@@ -5980,12 +5988,20 @@ PrefabInstance:
       value: SetPanning
       objectReference: {fileID: 0}
     - target: {fileID: 2828296964670293144, guid: 8640a43b3d34f7c4cb4ac6cd6fef90cc, type: 3}
+      propertyPath: gameEndEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PauseGame, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2828296964670293144, guid: 8640a43b3d34f7c4cb4ac6cd6fef90cc, type: 3}
       propertyPath: gameEndEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: PauseGame, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2828296964670293144, guid: 8640a43b3d34f7c4cb4ac6cd6fef90cc, type: 3}
       propertyPath: gameEndEvent.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: PauseGame, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2828296964670293144, guid: 8640a43b3d34f7c4cb4ac6cd6fef90cc, type: 3}
+      propertyPath: gameEndEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2828296964670293144, guid: 8640a43b3d34f7c4cb4ac6cd6fef90cc, type: 3}
       propertyPath: gameEndEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -6862,7 +6878,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8835384347490247350, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
       propertyPath: gameTime
-      value: 30
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8835384347490247350, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
       propertyPath: sfx.audioSource.Array.data[0]

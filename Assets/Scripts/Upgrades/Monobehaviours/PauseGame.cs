@@ -38,6 +38,7 @@ public class PauseGame : MonoBehaviour
 
     public void Reset()
     {
+        Debug.Log("Reseted");
         if(Application.IsPlaying(gameObject))
         backgroundSprite.transform.position = originalBackgroundPosition;
         shopObject.SetActive(true);

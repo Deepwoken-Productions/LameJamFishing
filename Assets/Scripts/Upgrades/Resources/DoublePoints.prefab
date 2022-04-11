@@ -48,8 +48,8 @@ MonoBehaviour:
   - serializedDelegate:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: TestUpgrade, Assembly-CSharp
+        - m_Target: {fileID: 2378089106645852733}
+          m_TargetAssemblyTypeName: PointMultiplier, Assembly-CSharp
           m_MethodName: Execute
           m_Mode: 1
           m_Arguments:
