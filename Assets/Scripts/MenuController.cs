@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
@@ -11,11 +12,28 @@ public class MenuController : MonoBehaviour
     [SerializeField] private GameObject menuElementsParent;
     [SerializeField] private GameObject warningObject;
     [SerializeField] private GameObject titleObject;
-
     [SerializeField] private float fadeDuration;
+    [SerializeField] private Text masterTXT;
+    [SerializeField] private Slider masterSlider;
+    [SerializeField] private AudioLink music;
+    [SerializeField] private AudioLink sfx;
+    [SerializeField] private UnityEvent onStart;
+
+    private float _masterMultiplier;
+
+    private void Awake()
+    {
+        masterSlider.onValueChanged.AddListener((newVal) => {
+            _masterMultiplier = newVal;
+            masterTXT.text = ((int)(_masterMultiplier*100)).ToString();
+        });
+        music.Init();
+        sfx.Init();
+    }
 
     public void StartGame()
     {
+        
         //StaticHelpers.Move(menuElementsParent.transform, hideLoc.position, lerpDuration);
         for (int i = 0; i < menuElementsParent.transform.childCount; i++)
         {
@@ -26,6 +44,7 @@ public class MenuController : MonoBehaviour
         exitGame.onClick.RemoveAllListeners();
         exitGame.onClick.AddListener(ShowWarning);
         exitGame.GetComponentInChildren<Text>().text = "To Menu";
+        onStart.Invoke();
     }
     private void ShowWarning()
     {
@@ -60,5 +79,33 @@ public class MenuController : MonoBehaviour
     {
         Application.Quit();
     }
+}
 
+[Serializable]
+public struct AudioLink
+{
+    public Slider slider;
+    public AudioSource [] audioSource;
+    public Text txt;
+    public Slider multipler;
+
+    public void Init()
+    {
+        AudioLink tmpThis = this;
+        
+        tmpThis.multipler.onValueChanged.AddListener(newVal =>
+        {
+            float multi = tmpThis.slider.value;
+            for (int i = 0; i < tmpThis.audioSource.Length; i++)
+                tmpThis.audioSource[i].volume = multi * newVal;
+        });
+        
+        tmpThis.slider.onValueChanged.AddListener( (newVal) =>
+        {
+            float multi = tmpThis.multipler.value; 
+            tmpThis.txt.text = ((int)(newVal*100)).ToString();
+            for (int i = 0; i < tmpThis.audioSource.Length; i++)
+                tmpThis.audioSource[i].volume = multi * newVal;
+        });
+    }
 }
