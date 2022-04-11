@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2828296964670293147}
   - component: {fileID: 2828296964670293144}
   - component: {fileID: 2828296964670293146}
+  - component: {fileID: 197027756977696269}
   m_Layer: 0
   m_Name: FishManager
   m_TagString: Untagged
@@ -49,6 +50,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daef47d120e9f1d4f83bcee4122e9d0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameEndEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   spawnableFish:
   - {fileID: 7364566766439780772, guid: ec8ae859624620e40ba4376d71992f78, type: 3}
   - {fileID: 7364566766439780772, guid: 14e48b08dcac8474385e0ca374879f3b, type: 3}
@@ -66,3 +94,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2828296964670293145}
   m_CullTransparentMesh: 1
+--- !u!114 &197027756977696269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2828296964670293145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67a5f74fb3a8504590968117ec7842e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundSprite: {fileID: 0}
+  backgroundPanDirection: {x: 0, y: 0.2, z: 0}
+  startPanning: 0

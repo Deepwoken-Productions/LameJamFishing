@@ -9,6 +9,7 @@ using Random = UnityEngine.Random;
 [RequireComponent(typeof(RectTransform))]
 public class WorldController : MonoBehaviour
 {
+    public UnityEngine.Events.UnityEvent gameEndEvent;
     public static int playerPoints = 0;
     public static float curTime { get; private set; }
     
@@ -47,6 +48,8 @@ public class WorldController : MonoBehaviour
             curTime += Time.deltaTime;
             await Task.Yield();
         }
+
+        gameEndEvent.Invoke();
     }
 
     private void Update()
