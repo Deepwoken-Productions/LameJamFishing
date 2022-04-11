@@ -9,7 +9,9 @@ public class PointMultiplier: MonoBehaviour, IUpgrade
 
     public void Execute()
     {
-        WorldController.playerPoints += (((int)multiplier.value * (int)fishPoints.value) - (int)fishPoints.value);
+        print("EXECUTED: " + multiplier);
+        FindObjectOfType<WorldController>().multiplier = multiplier.value;
+        //WorldController.playerPoints += (((int)multiplier.value * (int)fishPoints.value) - (int)fishPoints.value);
     }
 
 }

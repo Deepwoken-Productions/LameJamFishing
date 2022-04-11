@@ -11,6 +11,7 @@ public class WorldController : MonoBehaviour
 {
     public UnityEngine.Events.UnityEvent gameEndEvent;
     public static int playerPoints = 0;
+    public float multiplier = 1;
     public static float curTime { get; private set; }
     
     [SerializeField] private GameObject [] spawnableFish;
@@ -66,6 +67,7 @@ public class WorldController : MonoBehaviour
         spawnLoc += transform.position;
         Transform go = Instantiate(spawnableFish[randomFish], spawnLoc, spawnableFish[randomFish].transform.rotation, transform).transform;
         //is shiny
+        go.GetComponent<Fish>().ptsValue = (int) (multiplier * go.GetComponent<Fish>().ptsValue);
         if (Random.Range(0, 1f) <= shinyChance)
         {
             go.GetComponent<Fish>().ptsValue =  (int)(go.GetComponent<Fish>().ptsValue * shinyRewardMultiplier);
