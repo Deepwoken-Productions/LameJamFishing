@@ -22,6 +22,8 @@ public class Fish : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        _collider = GetComponent<Collider2D>();
+        _collider.isTrigger = true;
         DrawDebug();
         
         _rigidBody = GetComponent<Rigidbody2D>();

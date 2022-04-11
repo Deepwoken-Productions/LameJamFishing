@@ -15,6 +15,7 @@ public class GrappleCollision : MonoBehaviour
     public GrapplingHook grapple { get; private set; }
     public Fish fish { get; private set; }
 
+
     public void Initialize(GrapplingHook grapple)
     {
         gameObject.layer = LayerMask.NameToLayer("Catch Layer");
@@ -23,14 +24,13 @@ public class GrappleCollision : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Fish fish = null;
-        collision.TryGetComponent(out fish);
-
-        if(fish != null && this.fish == null)
+        //Don't need a layer cast, can only collider with fish.
+        if(fish == null)
         {
             grapple.OnHooked();
+            fish = collision.GetComponent<Fish>();
             fish.OnHooked(this);
-            this.fish = fish;
+            
         }
 
     }
