@@ -6588,6 +6588,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -32
       objectReference: {fileID: 0}
+    - target: {fileID: 792233123579456571, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 792233123579456571, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 792233123579456571, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 792233123579456571, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 792233123579456571, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -491.29578
+      objectReference: {fileID: 0}
+    - target: {fileID: 792233123579456571, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -216.341
+      objectReference: {fileID: 0}
+    - target: {fileID: 792233123579456571, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 792233123579456571, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 288
+      objectReference: {fileID: 0}
     - target: {fileID: 1506743308722112631, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
       propertyPath: upgradeManager
       value: 
@@ -6675,6 +6707,34 @@ PrefabInstance:
     - target: {fileID: 5078024725960985204, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
       propertyPath: m_Color.r
       value: 0.44868279
+      objectReference: {fileID: 0}
+    - target: {fileID: 5985412910246452041, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5985412910246452041, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5985412910246452041, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5985412910246452041, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5985412910246452041, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 992
+      objectReference: {fileID: 0}
+    - target: {fileID: 5985412910246452041, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 216
+      objectReference: {fileID: 0}
+    - target: {fileID: 5985412910246452041, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6304646451564188005, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
       propertyPath: m_IsActive
@@ -7396,12 +7456,12 @@ PrefabInstance:
       propertyPath: m_Text
       value: 'Catch Fish to earn points!
 
-
         Press left mouse button to catch
 
-
         Catch
-        shiny fish to get bonus points!'
+        shiny fish to get bonus points!
+
+        Buy upgrades every night!'
       objectReference: {fileID: 0}
     - target: {fileID: 8947629815941389809, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
       propertyPath: m_FontData.m_MinSize

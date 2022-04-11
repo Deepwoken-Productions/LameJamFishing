@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35fcc787ab7ca0f45b72dff05bf3199d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ptsValue: 5
+  ptsValue: 12
   jumpAngleMin: 60
   jumpAngleMax: 80
   verticalForce: 20
