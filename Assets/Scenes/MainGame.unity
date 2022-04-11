@@ -5649,25 +5649,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   incompaibleUpgradesList:
-  - incompatibleUpgrades:
-    - {fileID: 3187501935214974839, guid: 48380d11b2bc1b043bc07c2e9fb0a30c, type: 3}
-    - {fileID: 3187501935214974839, guid: 628cb68a2976d6b409524c721a6c475b, type: 3}
-    - {fileID: 3187501935214974839, guid: c39d38eee6a0dde419eff8ca9230bb40, type: 3}
+  - incompatibleUpgrades: []
     upgrade: {fileID: 3187501935214974839, guid: c2f163fff005de44f9e3b512d2b67694, type: 3}
   - incompatibleUpgrades:
     - {fileID: 3187501935214974839, guid: c2f163fff005de44f9e3b512d2b67694, type: 3}
-    - {fileID: 3187501935214974839, guid: 628cb68a2976d6b409524c721a6c475b, type: 3}
-    - {fileID: 3187501935214974839, guid: c39d38eee6a0dde419eff8ca9230bb40, type: 3}
     upgrade: {fileID: 3187501935214974839, guid: 48380d11b2bc1b043bc07c2e9fb0a30c, type: 3}
   - incompatibleUpgrades:
     - {fileID: 3187501935214974839, guid: 48380d11b2bc1b043bc07c2e9fb0a30c, type: 3}
-    - {fileID: 3187501935214974839, guid: c39d38eee6a0dde419eff8ca9230bb40, type: 3}
-    - {fileID: 3187501935214974839, guid: c2f163fff005de44f9e3b512d2b67694, type: 3}
     upgrade: {fileID: 3187501935214974839, guid: 628cb68a2976d6b409524c721a6c475b, type: 3}
   - incompatibleUpgrades:
     - {fileID: 3187501935214974839, guid: 628cb68a2976d6b409524c721a6c475b, type: 3}
-    - {fileID: 3187501935214974839, guid: c2f163fff005de44f9e3b512d2b67694, type: 3}
-    - {fileID: 3187501935214974839, guid: 48380d11b2bc1b043bc07c2e9fb0a30c, type: 3}
     upgrade: {fileID: 3187501935214974839, guid: c39d38eee6a0dde419eff8ca9230bb40, type: 3}
 --- !u!114 &1260069954
 MonoBehaviour:
@@ -6930,7 +6921,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8835384347490247350, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
       propertyPath: onStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
-      value: 1500
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 8835384347490247350, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
       propertyPath: onStart.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
