@@ -5242,7 +5242,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 605120819}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.00020267596, y: 35, z: 0}
+  m_LocalPosition: {x: 4.6832555e-11, y: 35, z: 0}
   m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_Children:
   - {fileID: 1400801035}
@@ -5866,7 +5866,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1384033850}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -7.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6628,6 +6628,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3009851274097587857, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 47d7aea474b6e6f4c8e842012f0c7484, type: 3}
     - target: {fileID: 3592147197718515052, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -7460,6 +7464,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8904593348973416710, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 47d7aea474b6e6f4c8e842012f0c7484, type: 3}
     - target: {fileID: 8947629815941389809, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
       propertyPath: m_Text
       value: 'Catch Fish to earn points!
