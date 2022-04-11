@@ -20,6 +20,8 @@ public class WorldController : MonoBehaviour
     [SerializeField] private float spawnChance;
     [Range(0,1f)]
     [SerializeField] private float shinyChance;
+
+    [SerializeField] private float shinyRewardMultiplier;
     
     private RectTransform spawnArea;
     private float fishSpawnChance;
@@ -28,9 +30,10 @@ public class WorldController : MonoBehaviour
     {
         spawnArea = GetComponent<RectTransform>();
         fishSpawnChance = spawnChance;
-        BeginRound(60000);
     }
-
+    
+    //Called from menu controller
+    
     public async void BeginRound(float duration)
     {
         curTime = 0;
@@ -62,6 +65,7 @@ public class WorldController : MonoBehaviour
         //is shiny
         if (Random.Range(0, 1f) <= shinyChance)
         {
+            go.GetComponent<Fish>().ptsValue =  (int)(go.GetComponent<Fish>().ptsValue * shinyRewardMultiplier);
             Instantiate(shinyParticle, go);
         }
     }

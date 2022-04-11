@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 [RequireComponent(typeof(SpriteRenderer), typeof(Rigidbody2D), typeof(Collider2D))]
 public class Fish : MonoBehaviour
 {
-    [SerializeField] private int ptsValue;
+    public int ptsValue;
     [SerializeField] private float jumpAngleMin;
     [SerializeField] private float jumpAngleMax;
     [SerializeField] private float verticalForce;

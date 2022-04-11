@@ -12,6 +12,7 @@ public class MenuController : MonoBehaviour
     [SerializeField] private GameObject menuElementsParent;
     [SerializeField] private GameObject warningObject;
     [SerializeField] private GameObject titleObject;
+    [SerializeField] private GameObject ptsObject;
     [SerializeField] private float fadeDuration;
     [SerializeField] private Text masterTXT;
     [SerializeField] private Slider masterSlider;
@@ -38,13 +39,18 @@ public class MenuController : MonoBehaviour
         for (int i = 0; i < menuElementsParent.transform.childCount; i++)
         {
             int i1 = i;
-            StaticHelpers.UIFade(menuElementsParent.transform.GetChild(i).GetComponent<Image>(), fadeDuration, false,  () => menuElementsParent.SetActive(false));
+            StaticHelpers.UIFade(menuElementsParent.transform.GetChild(i).GetComponent<Image>(), fadeDuration, false,  () =>
+            {
+                menuElementsParent.SetActive(false);
+                onStart.Invoke();
+                ptsObject.SetActive(true);
+            });
         }
         StaticHelpers.UIFade(titleObject.GetComponent<Image>(), fadeDuration, false, () => titleObject.SetActive(false));
         exitGame.onClick.RemoveAllListeners();
         exitGame.onClick.AddListener(ShowWarning);
         exitGame.GetComponentInChildren<Text>().text = "To Menu";
-        onStart.Invoke();
+        
     }
     private void ShowWarning()
     {
@@ -66,7 +72,9 @@ public class MenuController : MonoBehaviour
         for (int i = 0; i < menuElementsParent.transform.childCount; i++)
         {
             menuElementsParent.SetActive(true);
-            StaticHelpers.UIFade(menuElementsParent.transform.GetChild(i).GetComponent<Image>(), fadeDuration, true);
+            StaticHelpers.UIFade(menuElementsParent.transform.GetChild(i).GetComponent<Image>(), fadeDuration, true,
+                () => { ptsObject.SetActive(false); });
+            
         }
         exitGame.onClick.RemoveAllListeners();
         exitGame.onClick.AddListener(ExitGame);
