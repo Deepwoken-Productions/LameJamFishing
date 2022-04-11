@@ -14,6 +14,18 @@ public class StormEvent : Event
 
     private WaveMovement[] waves;
     private float elapsedTime;
+    
+    [Header("Fish Frenzy Properties")]
+
+    [SerializeField] private float fishSpawnChance;
+    
+    private WorldController worldController
+    {
+        get
+        {
+            return FindObjectOfType<WorldController>();
+        }
+    }
 
     private void Awake()
     {
@@ -35,6 +47,7 @@ public class StormEvent : Event
         FindObjectOfType<CameraController>().ShakeCamera(duration, camShakeMagnitude);
 
         CloudManager.instance.SpawnClouds();
+        worldController.SetFishSpawnChance(fishSpawnChance);
     }
     private void Update()
     {
@@ -58,7 +71,7 @@ public class StormEvent : Event
         {
             waves[i].EndStorm();
         }
-
+        worldController.SetFishSpawnChance(0.00005f);
         CloudManager.instance.DeleteClouds(20);
     }
 }

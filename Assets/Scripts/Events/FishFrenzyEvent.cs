@@ -18,11 +18,13 @@ public class FishFrenzyEvent : Event
 
     public override void PreformEvent()
     {
+        base.PreformEvent();
         worldController.SetFishSpawnChance(fishSpawnChance);
     }
 
     public override void EndEvent()
     {
-        worldController.SetFishSpawnChance(0.0005f);
+        base.EndEvent();
+        worldController.SetFishSpawnChance(0.00005f);
     }
 }
