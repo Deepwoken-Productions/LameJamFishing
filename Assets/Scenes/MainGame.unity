@@ -5917,7 +5917,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2828296964670293144, guid: 8640a43b3d34f7c4cb4ac6cd6fef90cc, type: 3}
       propertyPath: spawnableFish.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2828296964670293144, guid: 8640a43b3d34f7c4cb4ac6cd6fef90cc, type: 3}
       propertyPath: fishSpawnZs.Array.data[0]
@@ -5934,7 +5934,7 @@ PrefabInstance:
     - target: {fileID: 2828296964670293144, guid: 8640a43b3d34f7c4cb4ac6cd6fef90cc, type: 3}
       propertyPath: spawnableFish.Array.data[1]
       value: 
-      objectReference: {fileID: 7364566766439780772, guid: 14e48b08dcac8474385e0ca374879f3b, type: 3}
+      objectReference: {fileID: 7364566766439780772, guid: b0a8c0fcbd986ee4b9dbbcb36423ef5e, type: 3}
     - target: {fileID: 2828296964670293144, guid: 8640a43b3d34f7c4cb4ac6cd6fef90cc, type: 3}
       propertyPath: gameEndEvent.m_PersistentCalls.m_Calls.Array.size
       value: 4
