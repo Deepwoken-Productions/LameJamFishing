@@ -38,6 +38,7 @@ public class WorldController : MonoBehaviour
     
     public async void BeginRound(float duration)
     {
+        print("Active: " +fishSpawnChance );
         curTime = 0;
         while (curTime < duration)
         {

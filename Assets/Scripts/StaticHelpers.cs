@@ -23,16 +23,25 @@ public static class StaticHelpers
 
     public static async void UIFade(Image img, float duration, bool fadeIn = false, Action postEvt = null)
     {
-        float curTime = 0;
-        Color imgColor = img.color;
-        float originAlpha = imgColor.a;
-        float endAlpha = fadeIn ? 1 : 0;
-        while (curTime < duration)
+        try
         {
-            img.color = new Color(imgColor.r, imgColor.g, imgColor.b, Mathf.Lerp(originAlpha, endAlpha, curTime / duration));
-            curTime += Time.deltaTime;
-            await Task.Yield();
+            float curTime = 0;
+            Color imgColor = img.color;
+
+            float originAlpha = imgColor.a;
+            float endAlpha = fadeIn ? 1 : 0;
+            while (curTime < duration)
+            {
+                img.color = new Color(imgColor.r, imgColor.g, imgColor.b,
+                    Mathf.Lerp(originAlpha, endAlpha, curTime / duration));
+                curTime += Time.deltaTime;
+                await Task.Yield();
+            }
+
+            postEvt?.Invoke();
         }
-        postEvt?.Invoke();
+        catch (Exception)
+        {
+        }
     }
 }

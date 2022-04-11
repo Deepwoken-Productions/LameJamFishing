@@ -5,7 +5,8 @@ using UnityEngine;
 public class PauseGame : MonoBehaviour
 {
     public GameObject backgroundSprite;
-    public Vector3 backgroundPanDirection;
+    public Transform newLoc;
+    public GameObject shopObject;
 
     public bool startPanning;
 
@@ -26,11 +27,19 @@ public class PauseGame : MonoBehaviour
         originalBackgroundPosition = backgroundSprite.transform.position;
     }
 
-    private void Update()
+    public void StartPanning()
     {
         if (startPanning)
         {
-            backgroundSprite.transform.position -= backgroundPanDirection * Time.deltaTime;
+            print("Beginning Lerp");
+            StaticHelpers.Move(backgroundSprite.transform, newLoc.position, FindObjectOfType<MenuController>().gameTime, Reset);
         }
+    }
+
+    public void Reset()
+    {
+        if(Application.IsPlaying(gameObject))
+        backgroundSprite.transform.position = originalBackgroundPosition;
+        shopObject.SetActive(true);
     }
 }

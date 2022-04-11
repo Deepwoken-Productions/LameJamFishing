@@ -19,6 +19,7 @@ public class MenuController : MonoBehaviour
     [SerializeField] private AudioLink music;
     [SerializeField] private AudioLink sfx;
     [SerializeField] private UnityEvent onStart;
+    public float gameTime;
 
     private float _masterMultiplier;
 
@@ -50,7 +51,7 @@ public class MenuController : MonoBehaviour
         exitGame.onClick.RemoveAllListeners();
         exitGame.onClick.AddListener(ShowWarning);
         exitGame.GetComponentInChildren<Text>().text = "To Menu";
-        
+        FindObjectOfType<WorldController>().BeginRound(gameTime);
     }
     private void ShowWarning()
     {
