@@ -144,10 +144,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35fcc787ab7ca0f45b72dff05bf3199d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ptsValue: 1200
-  jumpAngleMin: 60
-  jumpAngleMax: 80
-  verticalForce: 20
+  ptsValue: 60
+  jumpAngleMin: 55
+  jumpAngleMax: 85
+  verticalForce: 22
   catchLayer:
     serializedVersion: 2
     m_Bits: 8

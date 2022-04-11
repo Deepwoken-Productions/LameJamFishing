@@ -40,19 +40,29 @@ public class MenuController : MonoBehaviour
         for (int i = 0; i < menuElementsParent.transform.childCount; i++)
         {
             int i1 = i;
-            StaticHelpers.UIFade(menuElementsParent.transform.GetChild(i).GetComponent<Image>(), fadeDuration, false,  () =>
+            if (menuElementsParent.transform.GetChild(i).gameObject.TryGetComponent<Image>(out Image img))
             {
-                menuElementsParent.SetActive(false);
-                onStart.Invoke();
-                ptsObject.SetActive(true);
-            });
+                StartCoroutine(StaticHelpers.UIFade(img,
+                    fadeDuration, false, () =>
+                    {
+                        menuElementsParent.SetActive(false);
+                        onStart.Invoke();
+                        ptsObject.SetActive(true);
+                    }));
+            }
         }
-        StaticHelpers.UIFade(titleObject.GetComponent<Image>(), fadeDuration, false, () => titleObject.SetActive(false));
+        StartCoroutine(StaticHelpers.UIFade(titleObject.GetComponent<Image>(), fadeDuration, false, () => titleObject.SetActive(false)));
         exitGame.onClick.RemoveAllListeners();
         exitGame.onClick.AddListener(ShowWarning);
         exitGame.GetComponentInChildren<Text>().text = "To Menu";
-        FindObjectOfType<WorldController>().BeginRound(gameTime);
+        StartNewRound();
     }
+
+    public void StartNewRound()
+    {
+        StartCoroutine(FindObjectOfType<WorldController>().BeginRound(gameTime));
+    }
+
     private void ShowWarning()
     {
         GameObject go = Instantiate(warningObject, transform);
@@ -73,15 +83,15 @@ public class MenuController : MonoBehaviour
         for (int i = 0; i < menuElementsParent.transform.childCount; i++)
         {
             menuElementsParent.SetActive(true);
-            StaticHelpers.UIFade(menuElementsParent.transform.GetChild(i).GetComponent<Image>(), fadeDuration, true,
-                () => { ptsObject.SetActive(false); });
+            StartCoroutine(StaticHelpers.UIFade(menuElementsParent.transform.GetChild(i).GetComponent<Image>(), fadeDuration, true,
+                () => { ptsObject.SetActive(false); }));
             
         }
         exitGame.onClick.RemoveAllListeners();
         exitGame.onClick.AddListener(ExitGame);
         exitGame.GetComponentInChildren<Text>().text = "Exit Game";
         titleObject.SetActive(true);
-        StaticHelpers.UIFade(titleObject.GetComponent<Image>(), fadeDuration, true);
+        StartCoroutine(StaticHelpers.UIFade(titleObject.GetComponent<Image>(), fadeDuration, true));
     }
 
     public void ExitGame()

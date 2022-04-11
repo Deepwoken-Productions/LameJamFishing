@@ -36,9 +36,8 @@ public class WorldController : MonoBehaviour
     
     //Called from menu controller
     
-    public async void BeginRound(float duration)
+    public IEnumerator BeginRound(float duration)
     {
-        print("Active: " +fishSpawnChance );
         curTime = 0;
         while (curTime < duration)
         {
@@ -48,10 +47,10 @@ public class WorldController : MonoBehaviour
             }
 
             curTime += Time.deltaTime;
-            await Task.Yield();
+            yield return null;
         }
-
         gameEndEvent.Invoke();
+        yield return null;
     }
 
     private void Update()

@@ -8,8 +8,6 @@ public class PauseGame : MonoBehaviour
     public Transform newLoc;
     public GameObject shopObject;
 
-    public bool startPanning;
-
     Vector3 originalBackgroundPosition;
 
     public void Pause() => Time.timeScale = 0;
@@ -20,27 +18,21 @@ public class PauseGame : MonoBehaviour
         backgroundSprite.transform.position = originalBackgroundPosition;
     }
 
-    public void SetPanning(bool pan) => startPanning = pan;
 
     private void Start()
     {
         originalBackgroundPosition = backgroundSprite.transform.position;
     }
 
-    public void StartPanning()
+    public void StartBorderMove()
     {
-        if (startPanning)
-        {
-            print("Beginning Lerp");
-            StaticHelpers.Move(backgroundSprite.transform, newLoc.position, FindObjectOfType<MenuController>().gameTime, Reset);
-        }
+       StartCoroutine(StaticHelpers.Move(backgroundSprite.transform, newLoc.position, FindObjectOfType<MenuController>().gameTime, Reset));
     }
 
     public void Reset()
     {
-        Debug.Log("Reseted");
-        if(Application.IsPlaying(gameObject))
         backgroundSprite.transform.position = originalBackgroundPosition;
-        shopObject.SetActive(true);
+        if(Application.IsPlaying(gameObject))
+            shopObject.SetActive(true);
     }
 }
