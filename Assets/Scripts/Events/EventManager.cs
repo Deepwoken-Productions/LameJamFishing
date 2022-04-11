@@ -19,13 +19,15 @@ public class EventManager : MonoBehaviour
         }
         else
         {
+           
             currentEventTimer = 0.0f;
             if (currentEvent != null && currentEvent.playingEvent)
             {
+                print("Ending Event");
                 currentEvent.EndEvent();
                 return; // Added return to have the game go calm again
             }
-
+            print("Running Event");
             currentEvent = events[Random.Range(0, events.Length)];
 
             currentEvent.PreformEvent();

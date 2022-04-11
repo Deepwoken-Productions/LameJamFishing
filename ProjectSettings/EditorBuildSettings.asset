@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/TempTesting.unity
-    guid: 0563a131435f9dc4ea0ec5012280ba3f
   - enabled: 0
-    path: Assets/Scenes/MainMenu.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/MainGame.unity
+    guid: e1b8ba258718fca4fa69b0353aa1182e
   m_configObjects: {}
