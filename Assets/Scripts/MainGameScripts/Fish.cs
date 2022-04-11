@@ -36,7 +36,7 @@ public class Fish : MonoBehaviour
         
         Debug.DrawRay(transform.position, direction * verticalForce, Color.red, 5f);
         _rigidBody.AddForce(direction * verticalForce, ForceMode2D.Impulse);
-        transform.eulerAngles = new Vector3(0, 0, rot * Mathf.Rad2Deg);
+        transform.eulerAngles = new Vector3(0, 0, (rot + transform.eulerAngles.z - 90) * Mathf.Rad2Deg);
     }
 
     void DrawDebug()

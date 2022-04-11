@@ -58,7 +58,7 @@ public class WorldController : MonoBehaviour
         Vector3 spawnLoc = new Vector3(Random.Range(spawnArea.rect.min.x, spawnArea.rect.max.x), Random.Range(spawnArea.rect.min.y, spawnArea.rect.max.y), fishSpawnZs[Random.Range(0,fishSpawnZs.Length)]);
 
         spawnLoc += transform.position;
-        Transform go = Instantiate(spawnableFish[randomFish], spawnLoc, Quaternion.identity, transform).transform;
+        Transform go = Instantiate(spawnableFish[randomFish], spawnLoc, spawnableFish[randomFish].transform.rotation, transform).transform;
         //is shiny
         if (Random.Range(0, 1f) <= shinyChance)
         {

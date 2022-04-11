@@ -5870,6 +5870,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2828296964670293144, guid: 8640a43b3d34f7c4cb4ac6cd6fef90cc, type: 3}
+      propertyPath: shinyChance
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2828296964670293144, guid: 8640a43b3d34f7c4cb4ac6cd6fef90cc, type: 3}
       propertyPath: fishCollectedText
       value: 
       objectReference: {fileID: 788972495}
@@ -5967,7 +5971,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2828296964670293147, guid: 8640a43b3d34f7c4cb4ac6cd6fef90cc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -8.1347
+      value: -7.59
       objectReference: {fileID: 0}
     - target: {fileID: 2828296964670293147, guid: 8640a43b3d34f7c4cb4ac6cd6fef90cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
