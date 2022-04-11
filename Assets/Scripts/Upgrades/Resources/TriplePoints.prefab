@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3187501935214974842}
   - component: {fileID: 3187501935214974837}
   m_Layer: 0
-  m_Name: TestUpgrade
+  m_Name: TriplePoints
   m_TagString: Upgrade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,3 +73,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b822052d4fa5d458cb947a353966b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiplier: {fileID: 11400000, guid: eb45fbcd2f8067d4c9eb7ae5e8e8109d, type: 2}
+  fishPoints: {fileID: 11400000, guid: fe8331ad0e1270a4abc21a9a45c22c6f, type: 2}

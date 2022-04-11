@@ -5643,7 +5643,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b9271bac32fe3943b301edd292dc44e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  incompaibleUpgradesList: []
+  incompaibleUpgradesList:
+  - incompatibleUpgrades:
+    - {fileID: 3187501935214974839, guid: 48380d11b2bc1b043bc07c2e9fb0a30c, type: 3}
+    - {fileID: 3187501935214974839, guid: 628cb68a2976d6b409524c721a6c475b, type: 3}
+    - {fileID: 3187501935214974839, guid: c39d38eee6a0dde419eff8ca9230bb40, type: 3}
+    upgrade: {fileID: 3187501935214974839, guid: c2f163fff005de44f9e3b512d2b67694, type: 3}
+  - incompatibleUpgrades:
+    - {fileID: 3187501935214974839, guid: c2f163fff005de44f9e3b512d2b67694, type: 3}
+    - {fileID: 3187501935214974839, guid: 628cb68a2976d6b409524c721a6c475b, type: 3}
+    - {fileID: 3187501935214974839, guid: c39d38eee6a0dde419eff8ca9230bb40, type: 3}
+    upgrade: {fileID: 3187501935214974839, guid: 48380d11b2bc1b043bc07c2e9fb0a30c, type: 3}
+  - incompatibleUpgrades:
+    - {fileID: 3187501935214974839, guid: 48380d11b2bc1b043bc07c2e9fb0a30c, type: 3}
+    - {fileID: 3187501935214974839, guid: c39d38eee6a0dde419eff8ca9230bb40, type: 3}
+    - {fileID: 3187501935214974839, guid: c2f163fff005de44f9e3b512d2b67694, type: 3}
+    upgrade: {fileID: 3187501935214974839, guid: 628cb68a2976d6b409524c721a6c475b, type: 3}
+  - incompatibleUpgrades:
+    - {fileID: 3187501935214974839, guid: 628cb68a2976d6b409524c721a6c475b, type: 3}
+    - {fileID: 3187501935214974839, guid: c2f163fff005de44f9e3b512d2b67694, type: 3}
+    - {fileID: 3187501935214974839, guid: 48380d11b2bc1b043bc07c2e9fb0a30c, type: 3}
+    upgrade: {fileID: 3187501935214974839, guid: c39d38eee6a0dde419eff8ca9230bb40, type: 3}
 --- !u!114 &1260069954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5658,9 +5678,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeCostPairs:
   - upgrade: {fileID: 3187501935214974839, guid: c2f163fff005de44f9e3b512d2b67694, type: 3}
-    cost: 20
+    cost: 1000
   - upgrade: {fileID: 3187501935214974839, guid: 48380d11b2bc1b043bc07c2e9fb0a30c, type: 3}
-    cost: 10
+    cost: 15000
+  - upgrade: {fileID: 3187501935214974839, guid: 628cb68a2976d6b409524c721a6c475b, type: 3}
+    cost: 50000
+  - upgrade: {fileID: 3187501935214974839, guid: c39d38eee6a0dde419eff8ca9230bb40, type: 3}
+    cost: 100000
 --- !u!1 &1264759081
 GameObject:
   m_ObjectHideFlags: 0
@@ -5899,7 +5923,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2828296964670293144, guid: 8640a43b3d34f7c4cb4ac6cd6fef90cc, type: 3}
       propertyPath: spawnableFish.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2828296964670293144, guid: 8640a43b3d34f7c4cb4ac6cd6fef90cc, type: 3}
       propertyPath: fishSpawnZs.Array.data[0]
@@ -5909,6 +5933,10 @@ PrefabInstance:
       propertyPath: fishSpawnZs.Array.data[1]
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 2828296964670293144, guid: 8640a43b3d34f7c4cb4ac6cd6fef90cc, type: 3}
+      propertyPath: spawnableFish.Array.data[0]
+      value: 
+      objectReference: {fileID: 7364566766439780772, guid: 14e48b08dcac8474385e0ca374879f3b, type: 3}
     - target: {fileID: 2828296964670293144, guid: 8640a43b3d34f7c4cb4ac6cd6fef90cc, type: 3}
       propertyPath: spawnableFish.Array.data[1]
       value: 

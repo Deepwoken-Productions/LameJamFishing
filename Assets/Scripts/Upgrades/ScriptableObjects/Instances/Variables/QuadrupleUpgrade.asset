@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf385a831bee4814b919b48b73a85faf, type: 3}
-  m_Name: NumberOfLines
+  m_Name: QuadrupleUpgrade
   m_EditorClassIdentifier: 
-  value: 3
+  value: 4

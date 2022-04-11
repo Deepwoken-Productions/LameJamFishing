@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3187501935214974839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3187501935214974836}
+  - component: {fileID: 3187501935214974842}
+  - component: {fileID: 3187501935214974837}
+  m_Layer: 0
+  m_Name: QuadruplePoints
+  m_TagString: Upgrade
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3187501935214974836
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3187501935214974839}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.24072143, y: 2.2154367, z: -30.31196}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3187501935214974842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3187501935214974839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74af7ab915642c4cb5d662a87506bd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventDelegatePairs:
+  - serializedDelegate:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3187501935214974837}
+          m_TargetAssemblyTypeName: TestUpgrade, Assembly-CSharp
+          m_MethodName: Execute
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    serializedEvent: {fileID: 11400000, guid: ffd7ec56f7bbec54aacfa0acdc9de0cc, type: 2}
+--- !u!114 &3187501935214974837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3187501935214974839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7b822052d4fa5d458cb947a353966b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiplier: {fileID: 11400000, guid: 7675338c6998062489301b3647103955, type: 2}
+  fishPoints: {fileID: 11400000, guid: fe8331ad0e1270a4abc21a9a45c22c6f, type: 2}

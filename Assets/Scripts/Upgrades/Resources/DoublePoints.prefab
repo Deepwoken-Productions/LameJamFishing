@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3187501935214974836}
   - component: {fileID: 3187501935214974842}
-  - component: {fileID: 3187501935214974837}
+  - component: {fileID: 2378089106645852733}
   m_Layer: 0
-  m_Name: TestUpgrade2
+  m_Name: DoublePoints
   m_TagString: Upgrade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   - serializedDelegate:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 3187501935214974837}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: TestUpgrade, Assembly-CSharp
           m_MethodName: Execute
           m_Mode: 1
@@ -61,7 +61,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
     serializedEvent: {fileID: 11400000, guid: ffd7ec56f7bbec54aacfa0acdc9de0cc, type: 2}
---- !u!114 &3187501935214974837
+--- !u!114 &2378089106645852733
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,3 +73,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b822052d4fa5d458cb947a353966b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiplier: {fileID: 11400000, guid: 915e031fa21b47d409d6a6e2efa76d89, type: 2}
+  fishPoints: {fileID: 11400000, guid: fe8331ad0e1270a4abc21a9a45c22c6f, type: 2}

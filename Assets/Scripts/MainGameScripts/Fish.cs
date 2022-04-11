@@ -19,6 +19,8 @@ public class Fish : MonoBehaviour
     private Collider2D _collider;
     private GrappleCollision _hookProperties;
 
+    public EventObject hookedEvent;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -87,6 +89,7 @@ public class Fish : MonoBehaviour
 
     public void DestroyFish()
     {
+        hookedEvent.Invoke();
         WorldController.playerPoints += ptsValue;
         Destroy(gameObject);
     }

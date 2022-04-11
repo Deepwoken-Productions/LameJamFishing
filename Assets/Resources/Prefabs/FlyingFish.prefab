@@ -152,3 +152,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   splashMass: 15
+  hookedEvent: {fileID: 11400000, guid: ffd7ec56f7bbec54aacfa0acdc9de0cc, type: 2}
