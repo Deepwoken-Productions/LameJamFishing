@@ -5589,6 +5589,68 @@ Transform:
   m_Father: {fileID: 1597492140}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1260069951
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1260069952}
+  - component: {fileID: 1260069954}
+  - component: {fileID: 1260069953}
+  m_Layer: 0
+  m_Name: UpgradeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1260069952
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260069951}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 808.0004, y: 483.29678, z: -815.32306}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1260069953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260069951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b9271bac32fe3943b301edd292dc44e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  incompaibleUpgradesList: []
+--- !u!114 &1260069954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260069951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09deda8667064974a9e3900334834ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradeCostPairs:
+  - upgrade: {fileID: 3187501935214974839, guid: c2f163fff005de44f9e3b512d2b67694, type: 3}
+    cost: 20
+  - upgrade: {fileID: 3187501935214974839, guid: 48380d11b2bc1b043bc07c2e9fb0a30c, type: 3}
+    cost: 10
 --- !u!1 &1264759081
 GameObject:
   m_ObjectHideFlags: 0
@@ -6365,6 +6427,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -32
       objectReference: {fileID: 0}
+    - target: {fileID: 1506743308722112631, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
+      propertyPath: upgradeManager
+      value: 
+      objectReference: {fileID: 1260069951}
+    - target: {fileID: 2413267786675434941, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3604772905730567321, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3604772905730567321, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6304646451564188005, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7984292008916770331, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
@@ -6372,6 +6454,18 @@ PrefabInstance:
     - target: {fileID: 7984292008916770331, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -220
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028627567669064103, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.00036621094
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028627567669064103, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -84.26477
+      objectReference: {fileID: 0}
+    - target: {fileID: 8709073369731152558, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8835384347258683225, guid: aea2f2f984f890f4a8a54210f3c19497, type: 3}
       propertyPath: m_Value

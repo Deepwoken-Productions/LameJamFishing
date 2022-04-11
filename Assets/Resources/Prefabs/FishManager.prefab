@@ -57,6 +57,7 @@ MonoBehaviour:
   fishSpawnZs: []
   spawnChance: 0.0005
   shinyChance: 1
+  shinyRewardMultiplier: 0
 --- !u!222 &2828296964670293146
 CanvasRenderer:
   m_ObjectHideFlags: 0
